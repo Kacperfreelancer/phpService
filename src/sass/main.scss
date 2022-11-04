@@ -1,0 +1,234 @@
+@import './colors';
+@import './components';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Overpass', sans-serif;
+}
+
+.intro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-image: linear-gradient(140deg, $very-light-red 35%, $light-red);
+    overflow: hidden;
+    border-bottom-left-radius: 25%;
+    color: $pure-white;
+
+    &-logo {
+        position: absolute;
+        top: 35px;
+        left: 25px;
+        z-index: 2;
+    }
+
+    &-bg {
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 2em;
+        text-align: center;
+        z-index: 2;
+
+        &-text {
+            font-size: 2rem;
+            font-weight: 200;
+            margin-bottom: 1em;
+
+            &-heading {
+                margin-bottom: .5em;
+                font-size: 3.4rem;
+                font-weight: 500;
+            }
+        }
+
+        &-btns {
+            padding: 1em;
+            display: flex;
+            gap: 1em;
+
+            &--transparent {
+                background-color: transparent;
+                color: $pure-white;
+
+                &:hover {
+                    background-color: $pure-white;
+                    color: $light-red-cta-text;
+                }
+            }
+        }
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0;
+    text-align: center;
+    overflow: hidden;
+
+    &-heading {
+        font-size: 3rem;
+        color: $very-dark-blue-heading;
+        margin-bottom: 1em;
+    }
+
+    &-img {
+        margin: 2em 0;
+    }
+
+    &-text {
+        padding: 1em;
+        color: $very-dark-grayish-blue-body-copy;
+        font-weight: 300;
+        margin-bottom: 1em;
+    }
+
+    &-bg {
+        position: absolute;
+        bottom: -190%;
+        left: 50%;
+        transform: translateX(-51%) scale(0.7);
+    }
+}
+
+.infrastructure {
+    margin-top: 10em;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    position: relative;
+    background-color: $very-dark-gray-blue;
+    z-index: -2;
+    overflow: hidden;
+
+
+    &-pattern-bg {
+        position: absolute;
+        right: 50%;
+        top: 1%;
+        transform: translate(50%, -50%) scale(0.6);
+        z-index: -1;
+    }
+
+    &-text {
+        margin-top: 60%;
+        padding: 2em;
+        text-align: center;
+        color: $grayish-blue-footer-text;
+
+        &-heading {
+            margin-bottom: 2em;
+            font-size: 3rem;
+        }
+
+        & p {
+            line-height: 180%;
+            font-weight: 300;
+            margin-bottom: 4em;
+        }
+
+    }
+}
+
+.advert {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $very-dark-blue-heading;
+
+    &-img {
+        max-width: 100%;
+    }
+
+    &-heading {
+        margin-bottom: 2em;
+        font-size: 3rem;
+    }
+
+    &-text {
+        padding: 0 2em 2em 2em;
+        font-weight: 300;
+        line-height: 180%;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    border-top-right-radius: 100px;
+    background-color: $very-dark-black-blue-footer-bgc;
+    color: $grayish-blue-footer-text;
+
+    &-logo {
+        margin: 2em;
+    }
+
+    &__text {
+        text-align: center;
+
+        &-list {
+            list-style: none;
+
+            &-item {
+                font-weight: 300;
+                line-height: 180%;
+
+                &--heading {
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    margin-bottom: 1em;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:576px) {
+    .wrapper {
+        max-width: 1440px;
+    }
+
+    .intro {
+        &__box {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            &-btns {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.wrapper {
+    max-width: 375px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.btn {
+    padding: 0.8em 1.5em;
+    background-color: $pure-white;
+    border: 1px solid $pure-white;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    color: $light-red-cta-text;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+
+    &:hover {
+        background-color: transparent;
+        color: $pure-white;
+    }
+}
